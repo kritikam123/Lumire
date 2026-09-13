@@ -10,7 +10,7 @@ const Input = ({
   ...rest
 }) => {
   return (
-    <div>
+    <div className="w-full">
       <input
         type={type}
         id={id}

@@ -7,6 +7,7 @@ const PageLayout = () => {
   return (
     <div className="flex flex-col gap-8">
       <div>
+        <AnnouncementBar />
         <Navbar />
       </div>
       <Outlet />

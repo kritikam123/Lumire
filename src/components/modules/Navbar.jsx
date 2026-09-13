@@ -12,9 +12,8 @@ const navItems = [
 const Navbar = () => {
   return (
     <div>
-      <AnnoucementBar />
 
-      <nav className="bg-[#FFFFFF] flex justify-between items-center py-5 px-10">
+      <nav className="bg-[#FFFFFF] flex justify-between items-center py-2 px-10">
         <div className="flex gap-6">
           {navItems.map((item) => (
             <NavbarLink key={item.title} to={item.path}>
