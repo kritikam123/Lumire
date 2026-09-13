@@ -1,4 +1,4 @@
-import AnnoucementBar from "../elements/AnnoucementBar";
+import AnnoucementBar from "../elements/AnnouncementBar";
 import NavbarLink from "../elements/NavbarLink";
 import Logo from "../elements/Logo";
 import NavbarIcons from "../elements/NavbarIcons";
