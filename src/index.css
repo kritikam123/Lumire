@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #111111;
+
+  --color-primary: #f5f4ef;
+  --color-primary-100: #faf9f6;
+  --color-primary-200: #eeeae3;
+  --color-primary-300: #e3ddd3;
+
+  --color-secondary: #a08f7d;
+  --color-secondary-100: #c8bbae;
+  --color-secondary-200: #8b7967;
+  --color-secondary-300: #665647;
+
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f4ef;
+  --color-gray-200: #e8e6e1;
+  --color-gray-300: #d6d2ca;
+  --color-gray-400: #aaa59c;
+  --color-gray-500: #77736c;
+  --color-gray-600: #55524c;
+  --color-gray-700: #3d3b37;
+  --color-gray-800: #282725;
+  --color-gray-900: #171716;
+
+  --color-navy: #102639;
+
+  --color-gold: #b89b65;
+  --color-gold-light: #d4bd91;
+  --color-gold-dark: #8c6f3f;
+
+  --color-warning: #b7791f;
+  --color-success: #527a5a;
+  --color-error: #b44a4a;
+
+  --font-family: "Libre Baskerville", serif;
+  --font-display: "Cormorant Garamond", serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
