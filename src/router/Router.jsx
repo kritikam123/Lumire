@@ -4,6 +4,8 @@ import AuthLayout from "../layout/AuthLayout";
 import Login from "../pages/Login";
 import Homepage from "../pages/Homepage";
 import Register from "../pages/Register";
+import Jewelrypage from "../pages/Jewelrypage";
+import Aboutpage from "../pages/Aboutpage";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +18,7 @@ const router = createBrowserRouter([
       },
     ],
   },
-   {
+  {
     path: "/register",
     element: <AuthLayout />,
     children: [
@@ -34,6 +36,26 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Homepage />,
+      },
+    ],
+  },
+  {
+    path: "/jewelry",
+    element: <PageLayout />,
+    children: [
+      {
+        index: true,
+        element: <Jewelrypage />,
+      },
+    ],
+  },
+  {
+    path: "/about",
+    element: <PageLayout />,
+    children: [
+      {
+        index: true,
+        element: <Aboutpage />,
       },
     ],
   },
