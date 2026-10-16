@@ -9,41 +9,21 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { login } = useContext(AuthContext);
-  const navigate = useNavigate;
+  const navigate = useNavigate(); // fixed
 
-  const [form, setForm] = useState({
-    email: "",
-    password: "",
-  });
-
+  const [form, setForm] = useState({ email: "", password: "" });
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
-
-    setErrors({
-      ...errors,
-      [name]: "",
-    });
+    setForm((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const validate = () => {
     const newErrors = {};
-    const email = form.email.toLowerCase().trim();
-
-    if (!email) {
-      newErrors.email = "Email is required";
-    }
-
-    if (!form.password) {
-      newErrors.password = "Password is required";
-    }
-
+    if (!form.email.trim()) newErrors.email = "Email is required";
+    if (!form.password) newErrors.password = "Password is required";
     return newErrors;
   };
 
@@ -51,7 +31,6 @@ const Login = () => {
     e.preventDefault();
 
     const validationErrors = validate();
-
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
@@ -66,14 +45,15 @@ const Login = () => {
       });
       return;
     }
-    toast.message("Login successful!", {
+
+    toast.success("Login successful!", {
       description: `Welcome back, ${user.firstName}!`,
       duration: 4000,
-      type: "success",
     });
-    localStorage.setItem("currentUser", JSON.stringify(user));
+
     navigate("/");
   };
+
   return (
     <form
       onSubmit={handleSubmit}

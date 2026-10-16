@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "sonner";
 
 import InputWithIcon from "../widget/InputWithIcon";
 import Input from "../components/elements/Input";
@@ -7,10 +8,8 @@ import Button from "../components/elements/Button";
 import { MdOutlineMail } from "react-icons/md";
 import { SlLock } from "react-icons/sl";
 
-
 import { useNavigate, Link } from "react-router-dom";
 import { getData, setData } from "../services/storage";
-
 
 const Register = () => {
   const navigate = useNavigate();
@@ -25,37 +24,29 @@ const Register = () => {
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
-    const {
-      name,
-      value,
-    } = (e) => {
-      setForm({
-        ...form,
-        [name]: value,
-      });
-      setErrors({
-        ...errors,
-        [name]: "",
-      });
-    };
+    const { name, value } = e.target;
+
+    setForm((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const validate = () => {
     const newErrors = {};
     const email = form.email.toLowerCase().trim();
 
-    if (!form.firstName) newErrors.firstName = "First name is required";
-    if (!form.lastName) newErrors.lastName = "Last name is required";
+    if (!form.firstName.trim()) newErrors.firstName = "First name is required";
+    if (!form.lastName.trim()) newErrors.lastName = "Last name is required";
 
     if (!email) {
       newErrors.email = "Email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       newErrors.email = "Invalid email";
+    } else {
+      const users = getData("users");
+      if (users.some((u) => u.email === email)) {
+        newErrors.email = "Email already exists";
+      }
     }
-
-    const users = getData("users");
-    const exists = users.find((u) => u.email === email);
-    if (exists) newErrors.email = "Email already exists";
 
     if (!form.password) {
       newErrors.password = "Password is required";
@@ -76,7 +67,6 @@ const Register = () => {
     e.preventDefault();
 
     const validationErrors = validate();
-
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
@@ -84,21 +74,27 @@ const Register = () => {
 
     const newUser = {
       id: crypto.randomUUID(),
-      firstName: form.firstName,
-      lastName: form.lastName,
+      firstName: form.firstName.trim(),
+      lastName: form.lastName.trim(),
       email: form.email.toLowerCase().trim(),
       password: form.password,
       address: null,
     };
 
-    const users = getData("users");
-    users.push(newUser);
-    setData("users", users);
-    toast.message("Register successful!", {
+    try {
+      const users = getData("users");
+      setData("users", [...users, newUser]);
+    } catch (error) {
+      console.error(error);
+      toast.error("Could not save your account. Please try again.");
+      return;
+    }
+
+    toast.success("Register successful!", {
       description: `Hello, ${newUser.firstName}. You are successfully registered!`,
       duration: 4000,
-      type: "success",
     });
+
     setForm({
       firstName: "",
       lastName: "",
@@ -108,6 +104,7 @@ const Register = () => {
     });
     navigate("/login");
   };
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -183,7 +180,9 @@ const Register = () => {
         className="mb-4"
       />
 
-      <Button type="submit" className="w-full">Create Account</Button>
+      <Button type="submit" className="w-full">
+        Create Account
+      </Button>
 
       <p className="text-s text-start text-gray-500 py-2">
         Already have an account?{" "}
