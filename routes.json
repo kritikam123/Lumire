@@ -1,0 +1,7 @@
+{
+  "/api/*": "/$1",
+  "/products/featured": "/products?isFeatured=true",
+  "/products/new": "/products?isNew=true",
+  "/products/category/:category": "/products?category=:category",
+  "/categories/:slug/products": "/products?category=:slug"
+}

@@ -1,0 +1,301 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Aria Signet Ring",
+      "category": "rings",
+      "price": 145,
+      "inStock": true,
+      "description": "A modern take on the classic signet, with a smooth polished face and a slim tapered band. Designed to be worn alone or stacked.",
+      "image": "/Aboutus03.png",
+      "material": "Solid 14k Gold",
+      "colors": ["silver", "gold"]
+    },
+    {
+      "id": 2,
+      "name": "Nova Pavé Band",
+      "category": "rings",
+      "price": 210,
+      "inStock": true,
+      "description": "A delicate band lined with a single row of pavé-set stones, catching light from every angle without feeling heavy on the hand.",
+      "image": "/Aboutus03.png",
+      "material": "Sterling Silver",
+      "colors": ["gold"]
+    },
+    {
+      "id": 3,
+      "name": "Linea Stacking Ring",
+      "category": "rings",
+      "price": 85,
+      "inStock": true,
+      "description": "A thin, understated band built to be layered three or four at a time, or worn solo for a quiet everyday look.",
+      "image": "/Aboutus03.png",
+      "material": "18k Gold Plated",
+      "colors": ["silver", "gold", "rose gold"]
+    },
+    {
+      "id": 4,
+      "name": "Halo Solitaire Ring",
+      "category": "rings",
+      "price": 320,
+      "inStock": true,
+      "description": "A single round stone lifted by a fine halo setting, balanced on a comfort-fit band that sits flush against the finger.",
+      "image": "/Aboutus03.png",
+      "material": "Recycled 14k Gold",
+      "colors": ["gold"]
+    },
+    {
+      "id": 5,
+      "name": "Twist Knot Ring",
+      "category": "rings",
+      "price": 95,
+      "inStock": true,
+      "description": "An organic, sculptural band that wraps and knots on itself, finished with a soft brushed texture.",
+      "image": "/Aboutus03.png",
+      "material": "14k Gold Vermeil",
+      "colors": ["silver", "gold"]
+    },
+    {
+      "id": 6,
+      "name": "Odessa Baguette Ring",
+      "category": "rings",
+      "price": 275,
+      "inStock": true,
+      "description": "A row of slim baguette-cut stones set edge to edge for a clean, architectural line across the finger.",
+      "image": "/Aboutus03.png",
+      "material": "Solid 14k Gold",
+      "colors": ["gold"]
+    },
+    {
+      "id": 7,
+      "name": "Petite Pendant Necklace",
+      "category": "necklaces",
+      "price": 120,
+      "inStock": true,
+      "description": "A small round pendant on a fine cable chain, sized to sit just at the collarbone. Our most-worn everyday piece.",
+      "image": "/Aboutus03.png",
+      "material": "Sterling Silver",
+      "colors": ["silver", "gold"]
+    },
+    {
+      "id": 8,
+      "name": "Bar Necklace",
+      "category": "necklaces",
+      "price": 98,
+      "inStock": true,
+      "description": "A slim horizontal bar pendant with a soft matte finish, hung on an adjustable chain from 16 to 18 inches.",
+      "image": "/Aboutus03.png",
+      "material": "18k Gold Plated",
+      "colors": ["silver", "gold", "rose gold"]
+    },
+    {
+      "id": 9,
+      "name": "Layla Layering Chain",
+      "category": "necklaces",
+      "price": 110,
+      "inStock": true,
+      "description": "A lightweight paperclip-style chain designed to layer with pendants or wear alone for a minimal look.",
+      "image": "/Aboutus03.png",
+      "material": "Recycled 14k Gold",
+      "colors": ["gold"]
+    },
+    {
+      "id": 10,
+      "name": "Solitaire Drop Necklace",
+      "category": "necklaces",
+      "price": 340,
+      "inStock": true,
+      "description": "A single brilliant-cut stone suspended from a fine chain, designed to catch light with every movement.",
+      "image": "/Aboutus03.png",
+      "material": "14k Gold Vermeil",
+      "colors": ["gold"]
+    },
+    {
+      "id": 11,
+      "name": "Coin Pendant Necklace",
+      "category": "necklaces",
+      "price": 135,
+      "inStock": true,
+      "description": "A hammered coin-style medallion with a lightly textured surface, hung on a durable curb chain.",
+      "image": "/Aboutus03.png",
+      "material": "Solid 14k Gold",
+      "colors": ["silver", "gold"]
+    },
+    {
+      "id": 12,
+      "name": "Tennis Necklace",
+      "category": "necklaces",
+      "price": 450,
+      "inStock": true,
+      "description": "A continuous line of small round stones set in a classic four-prong setting, worn close to the neck.",
+      "image": "/Aboutus03.png",
+      "material": "Sterling Silver",
+      "colors": ["gold"]
+    },
+    {
+      "id": 13,
+      "name": "Fine Curb Chain Bracelet",
+      "category": "bracelets",
+      "price": 110,
+      "inStock": true,
+      "description": "A classic curb-link bracelet in a slim profile, with a secure lobster clasp and 2-inch extender.",
+      "image": "/Aboutus03.png",
+      "material": "18k Gold Plated",
+      "colors": ["silver", "gold"]
+    },
+    {
+      "id": 14,
+      "name": "Pavé Tennis Bracelet",
+      "category": "bracelets",
+      "price": 380,
+      "inStock": true,
+      "description": "A line of hand-set pavé stones in a low-profile setting, designed to sit flat and comfortable on the wrist.",
+      "image": "/Aboutus03.png",
+      "material": "Recycled 14k Gold",
+      "colors": ["gold"]
+    },
+    {
+      "id": 15,
+      "name": "Bezel Bar Bracelet",
+      "category": "bracelets",
+      "price": 195,
+      "inStock": true,
+      "description": "A row of small bezel-set stones connected by a delicate chain, finished with an adjustable clasp.",
+      "image": "/Aboutus03.png",
+      "material": "14k Gold Vermeil",
+      "colors": ["silver", "gold"]
+    },
+    {
+      "id": 16,
+      "name": "Cuban Link Bracelet",
+      "category": "bracelets",
+      "price": 260,
+      "inStock": true,
+      "description": "A bold, flat-link chain bracelet with a substantial feel, available in a slim or chunky width.",
+      "image": "/Aboutus03.png",
+      "material": "Solid 14k Gold",
+      "colors": ["gold"]
+    },
+    {
+      "id": 17,
+      "name": "Beaded Chain Bracelet",
+      "category": "bracelets",
+      "price": 89,
+      "inStock": true,
+      "description": "A row of small polished beads alternating with fine chain links for a subtle textured look.",
+      "image": "/Aboutus03.png",
+      "material": "Sterling Silver",
+      "colors": ["silver", "gold"]
+    },
+    {
+      "id": 18,
+      "name": "Diamond Bangle",
+      "category": "bracelets",
+      "price": 520,
+      "inStock": true,
+      "description": "A solid, hinged bangle set with a line of small diamonds along the front face, opening with a hidden clasp.",
+      "image": "/Aboutus03.png",
+      "material": "18k Gold Plated",
+      "colors": ["gold"]
+    },
+    {
+      "id": 19,
+      "name": "Lab Diamond Solitaire Ring",
+      "category": "lab-diamonds",
+      "price": 890,
+      "inStock": true,
+      "description": "A round brilliant lab-grown diamond in a classic four-prong solitaire setting, available from 0.5 to 2.0 carats.",
+      "image": "/Aboutus03.png",
+      "material": "Recycled 14k Gold",
+      "colors": ["gold", "platinum"]
+    },
+    {
+      "id": 20,
+      "name": "Lab Diamond Tennis Bracelet",
+      "category": "lab-diamonds",
+      "price": 1450,
+      "inStock": true,
+      "description": "A continuous line of lab-grown round diamonds totaling 5 carats, set in a secure four-prong mounting.",
+      "image": "/Aboutus03.png",
+      "material": "14k Gold Vermeil",
+      "colors": ["gold"]
+    },
+    {
+      "id": 21,
+      "name": "Lab Diamond Stud Earrings",
+      "category": "lab-diamonds",
+      "price": 620,
+      "inStock": true,
+      "description": "Classic round lab-grown diamond studs in a secure four-prong setting with screw backs, sold as a pair.",
+      "image": "/Aboutus03.png",
+      "material": "Solid 14k Gold",
+      "colors": ["gold", "platinum"]
+    },
+    {
+      "id": 22,
+      "name": "Lab Diamond Eternity Band",
+      "category": "lab-diamonds",
+      "price": 980,
+      "inStock": true,
+      "description": "Lab-grown diamonds set continuously around the full band for a symmetrical look from every angle.",
+      "image": "/Aboutus03.png",
+      "material": "Sterling Silver",
+      "colors": ["gold", "platinum"]
+    },
+    {
+      "id": 23,
+      "name": "Lab Diamond Pendant",
+      "category": "lab-diamonds",
+      "price": 540,
+      "inStock": true,
+      "description": "A single round lab-grown diamond in a bezel setting, hung on a fine cable chain.",
+      "image": "/Aboutus03.png",
+      "material": "18k Gold Plated",
+      "colors": ["gold"]
+    },
+    {
+      "id": 24,
+      "name": "Lab Diamond Halo Ring",
+      "category": "lab-diamonds",
+      "price": 1150,
+      "inStock": true,
+      "description": "A center lab-grown diamond surrounded by a halo of smaller stones, set on a pavé band.",
+      "image": "/Aboutus03.png",
+      "material": "Recycled 14k Gold",
+      "colors": ["gold", "platinum"]
+    },
+    {
+      "id": 25,
+      "name": "Classic Hoop Earrings",
+      "category": "earrings",
+      "price": 95,
+      "inStock": true,
+      "description": "Lightweight, polished hoops in a mid-size diameter, designed to be worn daily without weighing on the ear.",
+      "image": "/Aboutus03.png",
+      "material": "14k Gold Vermeil",
+      "colors": ["silver", "gold"]
+    },
+    {
+      "id": 26,
+      "name": "Pavé Huggie Earrings",
+      "category": "earrings",
+      "price": 140,
+      "inStock": true,
+      "description": "Small huggie hoops lined with pavé stones, sitting close to the earlobe for a subtle sparkle.",
+      "image": "/Aboutus03.png",
+      "material": "Solid 14k Gold",
+      "colors": ["gold"]
+    },
+    {
+      "id": 27,
+      "name": "Threader Earrings",
+      "category": "earrings",
+      "price": 78,
+      "inStock": true,
+      "description": "A fine chain that threads through the ear, ending in a small polished bead. Sold as a single adjustable pair.",
+      "image": "/Aboutus03.png",
+      "material": "Sterling Silver",
+      "colors": ["silver", "gold"]
+    }
+  ]
+}

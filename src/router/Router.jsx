@@ -6,6 +6,11 @@ import Homepage from "../pages/Homepage";
 import Register from "../pages/Register";
 import Jewelrypage from "../pages/Jewelrypage";
 import Aboutpage from "../pages/Aboutpage";
+import ContactusPage from "../pages/ContactusPage";
+import Rings from "../pages/Rings";
+import Earrings from "../pages/Earrings";
+import Necklaces from "../pages/Necklaces";
+import Bracelet from "../pages/Bracelet";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +61,58 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Aboutpage />,
+      },
+    ],
+  },
+  {
+    path: "/contactus",
+    element: <PageLayout />,
+    children: [
+      {
+        index: true,
+        element: <ContactusPage />,
+      },
+    ],
+  },
+
+  {
+    path: "/earrings",
+    element: <PageLayout />,
+    children: [
+      {
+        index: true,
+        element: <Earrings />,
+      },
+    ],
+  },
+  {
+    path: "/necklaces",
+    element: <PageLayout />,
+    children: [
+      {
+        index: true,
+        element: <Necklaces />,
+      },
+    ],
+  },
+  {
+    path: "/bracelets",
+    element: <PageLayout />,
+    children: [
+      {
+        index: true,
+        element: <Bracelet />,
+      },
+    ],
+  },
+
+  {
+    path: "/rings",
+    element: <PageLayout />,
+    children: [
+      {
+        index: true,
+        element: <Rings />,
       },
     ],
   },

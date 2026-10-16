@@ -7,27 +7,27 @@ const jewelryItems = [
   {
     title: "Necklaces",
     image: HomeCollection01,
-    // path: "/collections/necklaces",
+    path: "/necklaces",
   },
   {
     title: "Rings",
     image: HomeCollection02,
-    // path: "/collections/rings",
+    path: "/rings",
   },
   {
     title: "Earrings",
     image: HomeCollection03,
-    // path: "/collections/earrings",
+    path: "/earrings",
   },
   {
     title: "Bracelets",
     image: HomeCollection04,
-    // path: "/collections/bracelets",
+    path: "/bracelets",
   },
   {
     title: "Lab Diamonds",
     image: HomeCollection04,
-    // path: "/collections/bracelets",
+    path: "/bracelets",
   },
 ];
 

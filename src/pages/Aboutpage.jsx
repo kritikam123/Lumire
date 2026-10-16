@@ -9,14 +9,7 @@ const Aboutpage = () => {
         Our Story
       </h1>
       <p className="font-[Cormorant_Garamond] mt-2 mb-6 text-xl text-left mb-10 leading-12">
-        Jewelry made to become part of your story. Lumire was born from a simple
-        belief: the most beautiful things don’t always need to be loud. We
-        created Lumire for those little moments that deserve to be remembered —
-        a new beginning, a quiet celebration, a meaningful gift, or simply a day
-        when you want to feel a little more like yourself. Inspired by timeless
-        elegance and the beauty of simplicity, each piece is thoughtfully
-        designed to feel effortless, delicate, and enduring. Jewelry that
-        complements who you are rather than defining you. For us, jewelry is
+    +mplements who you are rather than defining you. For us, jewelry is
         more than an accessory. It carries memories, marks milestones, and
         becomes a small part of the stories we tell about ourselves. <br />
         Wear it every day. Keep it forever. Make it yours. <br />
