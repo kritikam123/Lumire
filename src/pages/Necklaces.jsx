@@ -1,9 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Card from "../components/elements/Card";
 import products from "../data/products";
+import { useCart } from "../context/CartContext";
 
 const Necklaces = () => {
-  const necklaceProduct = products.filter((item) => item.category === "necklaces");
+  const { addToCart } = useCart();
+
+  const necklaceProduct = useMemo(
+    () => products.filter((item) => item.category === "necklaces"),
+    [],
+  );
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
@@ -34,6 +40,7 @@ const Necklaces = () => {
             cardCategory={item.category}
             cardPrice={item.price}
             cardButton={"Add to Cart"}
+            onButtonClick={() => addToCart(item)}
           />
         ))}
       </div>

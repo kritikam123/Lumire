@@ -11,26 +11,16 @@ import Rings from "../pages/Rings";
 import Earrings from "../pages/Earrings";
 import Necklaces from "../pages/Necklaces";
 import Bracelet from "../pages/Bracelet";
+import ProtectedRoute from "./ProtectedRoute";
+import CartPage from "../pages/CartPage";
 
 const router = createBrowserRouter([
   {
-    path: "/login",
+    path: "/",
     element: <AuthLayout />,
     children: [
-      {
-        index: true,
-        element: <Login />,
-      },
-    ],
-  },
-  {
-    path: "/register",
-    element: <AuthLayout />,
-    children: [
-      {
-        index: true,
-        element: <Register />,
-      },
+      { path: "login", element: <Login /> },
+      { path: "register", element: <Register /> },
     ],
   },
 
@@ -38,81 +28,39 @@ const router = createBrowserRouter([
     path: "/",
     element: <PageLayout />,
     children: [
+      { index: true, element: <Homepage /> },
+      { path: "/about", element: <Aboutpage /> },
       {
-        index: true,
-        element: <Homepage />,
+        path: "cart",
+        element: (
+          <ProtectedRoute>
+            <CartPage />
+          </ProtectedRoute>
+        ),
       },
-    ],
-  },
-  {
-    path: "/jewelry",
-    element: <PageLayout />,
-    children: [
       {
-        index: true,
+        path: "jewelry",
         element: <Jewelrypage />,
       },
-    ],
-  },
-  {
-    path: "/about",
-    element: <PageLayout />,
-    children: [
       {
-        index: true,
-        element: <Aboutpage />,
+        path: "rings",
+        element: <Rings />,
       },
-    ],
-  },
-  {
-    path: "/contactus",
-    element: <PageLayout />,
-    children: [
       {
-        index: true,
-        element: <ContactusPage />,
-      },
-    ],
-  },
-
-  {
-    path: "/earrings",
-    element: <PageLayout />,
-    children: [
-      {
-        index: true,
-        element: <Earrings />,
-      },
-    ],
-  },
-  {
-    path: "/necklaces",
-    element: <PageLayout />,
-    children: [
-      {
-        index: true,
+        path: "necklaces",
         element: <Necklaces />,
       },
-    ],
-  },
-  {
-    path: "/bracelets",
-    element: <PageLayout />,
-    children: [
       {
-        index: true,
+        path: "earrings",
+        element: <Earrings />,
+      },
+      {
+        path: "braclets",
         element: <Bracelet />,
       },
-    ],
-  },
-
-  {
-    path: "/rings",
-    element: <PageLayout />,
-    children: [
       {
-        index: true,
-        element: <Rings />,
+        path: "contactus",
+        element: <ContactusPage />,
       },
     ],
   },
