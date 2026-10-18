@@ -11,9 +11,11 @@ import Rings from "../pages/Rings";
 import Earrings from "../pages/Earrings";
 import Necklaces from "../pages/Necklaces";
 import Bracelets from "../pages/Bracelets";
-import LabDiamonds from "../pages/LabDiamonds";
+import LabDiamonds from "../pages/Labdiamonds";
 import Gifts from "../pages/Gifts";
 import Trending from "../pages/Trending";
+import Blog from "../pages/Blog";
+import BlogPost from "../pages/Blogpost";
 import ProtectedRoute from "./ProtectedRoute";
 import CartPage from "../pages/CartPage";
 import ProductDetails from "../pages/ProductDetails";
@@ -50,6 +52,8 @@ const router = createBrowserRouter([
       { path: "lab-diamonds", element: <LabDiamonds /> },
       { path: "gifts", element: <Gifts /> },
       { path: "trending", element: <Trending /> },
+      { path: "blog", element: <Blog /> },
+      { path: "blog/:slug", element: <BlogPost /> },
       { path: "contactus", element: <ContactusPage /> },
       { path: "productdetails/:id", element: <ProductDetails /> },
     ],
