@@ -18,6 +18,7 @@ import Blog from "../pages/Blog";
 import BlogPost from "../pages/Blogpost";
 import ProtectedRoute from "./ProtectedRoute";
 import CartPage from "../pages/CartPage";
+import CheckoutPage from "../pages/Checkoutpage";
 import ProductDetails from "../pages/ProductDetails";
 
 const router = createBrowserRouter([
@@ -41,6 +42,15 @@ const router = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <CartPage />
+          </ProtectedRoute>
+        ),
+      },
+
+      {
+        path: "checkout",
+        element: (
+          <ProtectedRoute>
+            <CheckoutPage />
           </ProtectedRoute>
         ),
       },

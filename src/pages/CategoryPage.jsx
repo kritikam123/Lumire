@@ -1,8 +1,10 @@
-import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useMemo, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 import { LuCheck, LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import products from "../data/products";
-import { useCart } from "../context/CartContext";
+import { AuthContext } from "../context/AuthContext.jsx";
+import { addToCart, checkCart } from "../services/cartServices";
 
 const CURRENCY = "$";
 const ITEMS_PER_PAGE = 8;
@@ -81,14 +83,14 @@ const ProductCard = ({ item, isAdded, onAdd }) => {
 // (a function that receives all products and returns the list to show).
 // Define getProducts outside your component so it stays stable between renders.
 const CategoryPage = ({ category, getProducts, title, description }) => {
-  // NOTE: if your CartContext names the cart array differently (e.g. cartItems),
-  // change it here. Each cart entry needs an `id` or `productId`.
-  const { addToCart, cart = [] } = useCart();
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
+  const [, setCartUpdates] = useState(0); // changing this re-draws the buttons
   const [currentPage, setCurrentPage] = useState(1);
   const [sortBy, setSortBy] = useState("featured");
 
-  const necklaces = useMemo(() => {
+  const sortedProducts = useMemo(() => {
     const list = getProducts
       ? getProducts(products)
       : products.filter((item) => item.category === category);
@@ -104,14 +106,22 @@ const CategoryPage = ({ category, getProducts, title, description }) => {
     }
   }, [category, getProducts, sortBy]);
 
-  const cartIds = useMemo(
-    () => new Set(cart.map((c) => Number(c.id ?? c.productId))),
-    [cart],
-  );
+  const handleAddToCart = (item) => {
+    if (!user) {
+      toast("Please log in to add items to your cart");
+      navigate("/login");
+      return;
+    }
+    addToCart(user.id, item.id, 1);
+    setCartUpdates((n) => n + 1); // refresh so the button shows "Added to cart"
+  };
 
-  const totalPages = Math.max(1, Math.ceil(necklaces.length / ITEMS_PER_PAGE));
+  const totalPages = Math.max(
+    1,
+    Math.ceil(sortedProducts.length / ITEMS_PER_PAGE),
+  );
   const start = (currentPage - 1) * ITEMS_PER_PAGE;
-  const currentItems = necklaces.slice(start, start + ITEMS_PER_PAGE);
+  const currentItems = sortedProducts.slice(start, start + ITEMS_PER_PAGE);
 
   const goToPage = (page) => {
     setCurrentPage(Math.min(Math.max(page, 1), totalPages));
@@ -140,7 +150,8 @@ const CategoryPage = ({ category, getProducts, title, description }) => {
       {/* Toolbar */}
       <div className="mb-8 flex items-center justify-between border-y border-[#E4DBD1] py-3">
         <p className="text-sm text-[#6F6258]">
-          {necklaces.length} {necklaces.length === 1 ? "piece" : "pieces"}
+          {sortedProducts.length}{" "}
+          {sortedProducts.length === 1 ? "piece" : "pieces"}
         </p>
         <label className="flex items-center gap-2 text-sm text-[#6F6258]">
           Sort by
@@ -169,8 +180,8 @@ const CategoryPage = ({ category, getProducts, title, description }) => {
             <ProductCard
               key={item.id}
               item={item}
-              isAdded={cartIds.has(Number(item.id))}
-              onAdd={() => addToCart(item)}
+              isAdded={user ? Boolean(checkCart(user.id, item.id)) : false}
+              onAdd={() => handleAddToCart(item)}
             />
           ))}
         </div>
