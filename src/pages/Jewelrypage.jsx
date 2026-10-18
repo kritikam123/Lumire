@@ -27,7 +27,7 @@ const jewelryItems = [
   {
     title: "Lab Diamonds",
     image: HomeCollection04,
-    path: "/bracelets",
+    path: "/lab-diamonds",
   },
 ];
 

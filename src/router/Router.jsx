@@ -10,9 +10,13 @@ import ContactusPage from "../pages/ContactusPage";
 import Rings from "../pages/Rings";
 import Earrings from "../pages/Earrings";
 import Necklaces from "../pages/Necklaces";
-import Bracelet from "../pages/Bracelet";
+import Bracelets from "../pages/Bracelets";
+import LabDiamonds from "../pages/LabDiamonds";
+import Gifts from "../pages/Gifts";
+import Trending from "../pages/Trending";
 import ProtectedRoute from "./ProtectedRoute";
 import CartPage from "../pages/CartPage";
+import ProductDetails from "../pages/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +33,7 @@ const router = createBrowserRouter([
     element: <PageLayout />,
     children: [
       { index: true, element: <Homepage /> },
-      { path: "/about", element: <Aboutpage /> },
+      { path: "about", element: <Aboutpage /> },
       {
         path: "cart",
         element: (
@@ -38,30 +42,16 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
-      {
-        path: "jewelry",
-        element: <Jewelrypage />,
-      },
-      {
-        path: "rings",
-        element: <Rings />,
-      },
-      {
-        path: "necklaces",
-        element: <Necklaces />,
-      },
-      {
-        path: "earrings",
-        element: <Earrings />,
-      },
-      {
-        path: "braclets",
-        element: <Bracelet />,
-      },
-      {
-        path: "contactus",
-        element: <ContactusPage />,
-      },
+      { path: "jewelry", element: <Jewelrypage /> },
+      { path: "rings", element: <Rings /> },
+      { path: "necklaces", element: <Necklaces /> },
+      { path: "earrings", element: <Earrings /> },
+      { path: "bracelets", element: <Bracelets /> },
+      { path: "lab-diamonds", element: <LabDiamonds /> },
+      { path: "gifts", element: <Gifts /> },
+      { path: "trending", element: <Trending /> },
+      { path: "contactus", element: <ContactusPage /> },
+      { path: "productdetails/:id", element: <ProductDetails /> },
     ],
   },
 ]);
